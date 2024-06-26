@@ -11,9 +11,11 @@
 <body>
     <main class = "presentacion">
         <section class = "presentacionEncriptador">
-            <img class = "logo" src = "./img/Logo.png" alt = "Logo de la pagina">
+            <div class = "contenedorLogo">
+                <img class = "logo" src = "./img/Logo.png" alt = "Logo de la pagina">
+            </div>
             <div class = "presentacionEncriptadorSistema">
-                <input class = "presentacionEncriptadorSistemaInput" type="text" id="input" placeholder="Ingrese el texto aqui">
+                <textarea class = "presentacionEncriptadorSistemaInput" rows="10" cols="50" placeholder = "Ingresa texto aqui..."></textarea>
                 <div class = "instrucciones">
                     <img src = "./img/info.png" alt = "Informacion importante">
                     <p class = "instrucciones">Solo letras minúsculas y sin acentos</p>
@@ -24,7 +26,6 @@
                 </div>
             </div>
             <div class = "salida">
-                <p id = "salidaTextoDescifrado">Lorem ipsum</p>
                 <img src = "./img/Muñeco.png" alt = "Buscando mensaje">
                 <div class = "mensajeSugerencia">
                     <p class = "mensajeSugerenciaNoEncontrado"> <strong>Aún mensaje fue encontrado</strong></p>
@@ -33,6 +34,7 @@
                 <button class = "salidaBotonCopiar" onclick = "copiarTexto()" > Copiar </button>
             </div>
         </section>
+        
     </main>
     <footer class = "pieDePagina">
         <p> Desarrollado por Luis Díaz en base a lo aprendido Alura Latam</p>
