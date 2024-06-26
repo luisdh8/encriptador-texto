@@ -3,11 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <script src="app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <title>Encriptador de texto</title>
 </head>
 <body>
-    
+    <main class = "presentacion">
+        <section class = "presentacionEncriptador">
+            <img class = "logo" src = "./img/Logo.png" alt = "Logo de la pagina">
+            <div class = "presentacionEncriptadorSistema">
+                <input class = "presentacionEncriptadorSistemaInput" type="text" id="input" placeholder="Ingrese el texto aqui">
+                <div class = "instrucciones">
+                    <img src = "./img/info.png" alt = "Informacion importante">
+                    <p class = "instrucciones">Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class = "presentacionEncriptadorSistemaBotones">
+                    <button class = "presentacionEncriptadorSistemaBotonEncriptar" onclick = "encriptarTexto()" > Cifrar </button>
+                    <button class = "presentacionEncriptadorSistemaBotonDesencriptar" onclick = "desencriptarTexto()" disabled> Descifrar </button>
+                </div>
+            </div>
+            <div class = "salida">
+                <p id = "salidaTextoDescifrado">Lorem ipsum</p>
+                <img src = "./img/Muñeco.png" alt = "Buscando mensaje">
+                <div class = "mensajeSugerencia">
+                    <p class = "mensajeSugerenciaNoEncontrado"> <strong>Aún mensaje fue encontrado</strong></p>
+                    <p class = "mensajeSugerenciaInformacion">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <button class = "salidaBotonCopiar" onclick = "copiarTexto()" > Copiar </button>
+            </div>
+        </section>
+    </main>
+    <footer class = "pieDePagina">
+        <p> Desarrollado por Luis Díaz en base a lo aprendido Alura Latam</p>
+    </footer>
 </body>
 </html>
