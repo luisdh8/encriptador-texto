@@ -9,6 +9,24 @@
     --colorHover: #D8DFE8;
 }
 
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+/* Restablecer la animación cuando el botón está activo */
+.raise:active {
+  box-shadow: none;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.raise {
+    --hover: #08539C;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -58,11 +76,12 @@ body{
 }
 
 .logo{
-    width: 100%;
+    width: 40%;
     align-self: start;
 }
 
 .presentacionEncriptadorSistema{
+    display: flex;
     background-color: var(--colorSecundario);
     justify-content: center;
     flex-direction: column;
@@ -169,7 +188,20 @@ body{
     height: calc(79% - 64px);
 }
 
+.textoSalida{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-family: var(--fuenteInter);
+    font-size: 1.5rem;
+    color: #495057;
+}
+
 .mensajeSugerenciaNoEncontrado{
+    height: auto;
+    width: auto;
     font-family: var(--fuenteInter);
     font-size: 1.5rem;
     color: #343A40;
@@ -177,6 +209,8 @@ body{
     font-weight: 24;
 }
 .mensajeSugerenciaInformacion{
+    height: auto;
+    width: auto;
     font-family: var(--fuenteInter);
     font-size: 1rem;
     color: #495057;
@@ -199,4 +233,92 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 375px){
+    .presentacion{
+        height: 96%;
+        width: 100%;
+    }
+
+    .presentacionEncriptador {
+        flex-direction: column;
+        width: calc(100% - 84px);
+        height: calc(100% - 84px);
+        justify-content: center;
+        margin: auto;
+        gap: 2rem;
+    }
+
+    .contenedorLogo {
+        height: 5%;
+        align-self: start;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .presentacionEncriptadorSistema {
+        width: 100%;
+        height: 75%;
+    }
+
+    .presentacionEncriptadorSistemaInput {
+        width: 100%;
+        height: 65%;
+        font-size: 2rem;;
+    }
+
+    .instrucciones {
+        font-size: 0.75rem;
+        height: 2%;
+        gap: 0.5rem;
+    }
+
+    .presentacionEncriptadorSistemaBotones {
+        flex-direction: column;
+        height: 33%;
+        width: 100%;
+        gap: 0;
+    }
+
+    .presentacionEncriptadorSistemaBotonEncriptar{
+        width: 100%;
+    }
+    .presentacionEncriptadorSistemaBotonDesencriptar{
+        width: 100%;
+    }
+
+    .salida {
+        width: 100%;
+        height: 20%;
+        gap: 1rem;
+    }
+
+    .mensajeSugerencia img{
+        display: none;
+    }
+
+    .mensajeSugerenciaInformacion{
+        width: 100%;
+
+    }
+    .mensajeSugerenciaNoEncontrado{
+        width: 100%;
+    }
+
+    .salidaBotonCopiar{
+        height: auto;
+        display: none;
+    }
+
+    .textoSalida {
+        font-size: 1rem;
+    }
+
+    .pieDePagina {
+        height: 4%;
+        font-size: 1rem;
+    }
 }
